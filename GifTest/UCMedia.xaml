@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="GifTest.UCMedia"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GifTest"
+             xmlns:vlc="clr-namespace:Vlc.DotNet.Wpf;assembly=Vlc.DotNet.Wpf"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" Loaded="UserControl_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid  x:Name="gd">
+            <!--<vlc:VlcControl x:Name="vlc" ></vlc:VlcControl>-->
+            <MediaElement   x:Name="media"  LoadedBehavior="Manual" ></MediaElement>
+            
+            <!--Source=".\Images\femur_left.mp4"-->
+        </Grid>
+        <Grid Height="50" Grid.Row="1">
+            <Slider ValueChanged="PositiveProgress_ValueChanged" x:Name="PositiveProgress" Maximum="1000" Minimum="0"></Slider>
+        </Grid>
+    </Grid>
+</UserControl>
